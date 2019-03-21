@@ -12,5 +12,5 @@
 <img src="https://github.com/wkiwi/wkiwi-djzk/blob/master/demo.png" width="365" />
 <img src="https://github.com/wkiwi/wkiwi-djzk/blob/master/demo2.png" width="365" />
 <img src="https://github.com/wkiwi/wkiwi-djzk/blob/master/demo3.png" width="365" />
-<img src="https://github.com/wkiwi/wkiwi-djzk/blob/master/demo4.jif" width="365" />
+<img src="https://github.com/wkiwi/wkiwi-djzk/blob/master/demo4.gif" width="365" />
 <img src="https://github.com/wkiwi/wkiwi-djzk/blob/master/demo5.png" width="365" />
