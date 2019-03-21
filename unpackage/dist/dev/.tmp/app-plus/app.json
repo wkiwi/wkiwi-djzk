@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/classify/classify",
+    "pages/index/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "独家折扣",
+    "navigationBarBackgroundColor": "#fca853",
+    "backgroundColor": "#fbf9fe"
+  },
+  "usingComponents": {},
+  "splashscreen": {
+    "alwaysShowBeforeRender": true,
+    "autoclose": false
+  },
+  "appname": "wkiwi-djzk"
+}
