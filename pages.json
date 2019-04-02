@@ -3,7 +3,17 @@
 		{
 			"path": "pages/classify/classify",
 			"style": {
-				"navigationBarTitleText": "分类"
+				"navigationBarTitleText": "分类",
+				"app-plus": {
+                    "bounce": "none", //关闭窗口回弹效果
+                    "titleNView": {
+                        "buttons": [ //原生标题栏按钮配置,
+                            {
+                                "text": "分享" //原生标题栏增加分享按钮，点击事件可通过页面的 onNavigationBarButtonTap 函数进行监听
+                            }
+                        ]
+                    }
+                }
 			}
 		},
 		{

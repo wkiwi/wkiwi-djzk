@@ -41,30 +41,30 @@
 		},
 		onLoad: function () {
 			let _this = this
-			this.height = uni.getSystemInfoSync().windowHeight ;
+			this.height = uni.getSystemInfoSync().windowHeight;
 			this.navLeftHeight = this.leftItemHeight * classifyData.length;
 			this.diff =  this.navLeftHeight - this.height;
-			setTimeout(()=> {
-				let selectorQuery=uni.createSelectorQuery()
-				selectorQuery.selectAll('.box').boundingClientRect(function(rects) {
-					let arr = [0];
-					let top = 0;
-					rects.forEach(function(rect){
-	// 					rect.id      // 节点的ID
-	// 					rect.dataset // 节点的dataset
-	// 					rect.left    // 节点的左边界坐标
-	// 					rect.right   // 节点的右边界坐标
-	// 					rect.top     // 节点的上边界坐标
-	// 					rect.bottom  // 节点的下边界坐标
-	// 					rect.width   // 节点的宽度
-	// 					rect.height  // 节点的高度
-						top += rect.height;
-						arr.push(top)
-					  })
-					  console.log(arr)
-					  _this.arr = arr
-					}).exec()
-			},1000)
+		},
+		onReady() {
+			let selectorQuery=uni.createSelectorQuery()
+			selectorQuery.selectAll('.box').boundingClientRect(function(rects) {
+				let arr = [0];
+				let top = 0;
+				rects.forEach(function(rect){
+// 					rect.id      // 节点的ID
+// 					rect.dataset // 节点的dataset
+// 					rect.left    // 节点的左边界坐标
+// 					rect.right   // 节点的右边界坐标
+// 					rect.top     // 节点的上边界坐标
+// 					rect.bottom  // 节点的下边界坐标
+// 					rect.width   // 节点的宽度
+// 					rect.height  // 节点的高度
+					top += rect.height;
+					arr.push(top)
+					})
+					console.log(arr)
+					_this.arr = arr
+				}).exec()
 		},
 		methods: {
 			scroll(e) {

@@ -1253,27 +1253,27 @@ var _classifyData = _interopRequireDefault(__webpack_require__(/*! ../../common/
     this.height = uni.getSystemInfoSync().windowHeight;
     this.navLeftHeight = this.leftItemHeight * _classifyData.default.length;
     this.diff = this.navLeftHeight - this.height;
-    setTimeout(function () {
-      var selectorQuery = uni.createSelectorQuery();
-      selectorQuery.selectAll('.box').boundingClientRect(function (rects) {
-        var arr = [0];
-        var top = 0;
-        rects.forEach(function (rect) {
-          // 					rect.id      // 节点的ID
-          // 					rect.dataset // 节点的dataset
-          // 					rect.left    // 节点的左边界坐标
-          // 					rect.right   // 节点的右边界坐标
-          // 					rect.top     // 节点的上边界坐标
-          // 					rect.bottom  // 节点的下边界坐标
-          // 					rect.width   // 节点的宽度
-          // 					rect.height  // 节点的高度
-          top += rect.height;
-          arr.push(top);
-        });
-        console.log(arr);
-        _this.arr = arr;
-      }).exec();
-    }, 1000);
+  },
+  onReady: function onReady() {
+    var selectorQuery = uni.createSelectorQuery();
+    selectorQuery.selectAll('.box').boundingClientRect(function (rects) {
+      var arr = [0];
+      var top = 0;
+      rects.forEach(function (rect) {
+        // 					rect.id      // 节点的ID
+        // 					rect.dataset // 节点的dataset
+        // 					rect.left    // 节点的左边界坐标
+        // 					rect.right   // 节点的右边界坐标
+        // 					rect.top     // 节点的上边界坐标
+        // 					rect.bottom  // 节点的下边界坐标
+        // 					rect.width   // 节点的宽度
+        // 					rect.height  // 节点的高度
+        top += rect.height;
+        arr.push(top);
+      });
+      console.log(arr);
+      _this.arr = arr;
+    }).exec();
   },
   methods: {
     scroll: function scroll(e) {
