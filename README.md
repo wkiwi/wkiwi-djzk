@@ -2,7 +2,10 @@
 
 > A uni-app project
 
+# 更新历史
 
+2019-04-02 17:40
+更新延迟问题，在onReady DOM渲染后获取dom节点信息
 # 效果演示
 
 [查看完整版请戳这里](http://down.kiwifruits.cn)
