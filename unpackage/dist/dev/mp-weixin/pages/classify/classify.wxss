@@ -36,6 +36,9 @@
 		    -ms-flex-pack: center;
 		        justify-content: center;
 }
+.nav-left-item:last-child{
+		border-bottom: none;
+}
 .nav-right {
 		width: 75%;
 }

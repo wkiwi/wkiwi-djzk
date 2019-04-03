@@ -22,31 +22,33 @@
 	export default {
 		data() {
 			return {
-				categoryList: [],
-				subCategoryList: [],
+				name: "wkiwi",
 				height: 0,
 				categoryActive: 0,
 				scrollTop: 0,
 				scrollLeftTop: 0,
-				scrollHeight: 0,
-				name: "wkiwi",
+				// scrollHeight: 0,
 				classifyData:classifyData,
-				arr:[0,584,1168,1752,2336,2805,3274,3858,4442,4911,5380,5734,6203,6672,7017],
-				leftItemHeight: 51,//此处修改也要修改css
-				navLeftHeight:0,//左边nav的总高度
-				diff: 0,//左边nav的总高度与视口之差
+				arr:[0,584,1168,1752,2336,2805,3274,3858,4442,4911,5380,5734,6203,6672,7017],//初始值，后边计算会根据手机适配覆盖
+				leftItemHeight: 51,//49行会计算出新值进行覆盖
+				navLeftHeight:0,//左边scroll-view 内层nav的总高度
+				diff: 0,//左边scroll-view 内层nav的总高度与视口之差
+				tabBarHeight:0,//如果此页面为Tab页面，自己改变高度值,,一般tab高度为51
 			}
 		},
 		onShow() {
 		},
 		onLoad: function () {
-			let _this = this
-			this.height = uni.getSystemInfoSync().windowHeight;
-			this.navLeftHeight = this.leftItemHeight * classifyData.length;
-			this.diff =  this.navLeftHeight - this.height;
+			this.height = uni.getSystemInfoSync().windowHeight - this.tabBarHeight;
 		},
 		onReady() {
-			let selectorQuery=uni.createSelectorQuery()
+			let _this = this;
+			let selectorQuery=uni.createSelectorQuery();
+			selectorQuery.selectAll('.nav-left-item').boundingClientRect(function(rects) {
+				_this.leftItemHeight  =  rects[0].height;
+				_this.navLeftHeight = _this.leftItemHeight * classifyData.length;
+				_this.diff =  _this.navLeftHeight - _this.height;
+			});
 			selectorQuery.selectAll('.box').boundingClientRect(function(rects) {
 				let arr = [0];
 				let top = 0;
@@ -129,7 +131,9 @@
 		align-items: center;
 		justify-content: center;
 	}
-
+	.nav-left-item:last-child{
+		border-bottom: none;
+	}
 	.nav-right {
 		width: 75%;
 	}
