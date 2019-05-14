@@ -1245,39 +1245,46 @@ var _classifyData = _interopRequireDefault(__webpack_require__(/*! ../../common/
       tabBarHeight: 0 //如果此页面为Tab页面，自己改变高度值,,一般tab高度为51
     };
   },
-  onShow: function onShow() {
+  created: function created() {
+    //如果你的分类数据为后台异步获取请	将下方代码放置你的数据回调中
+    // this.$nextTick(()=>{
+    // 	this.getHeightList();
+    // })
   },
   onLoad: function onLoad() {
     this.height = uni.getSystemInfoSync().windowHeight - this.tabBarHeight;
   },
   onReady: function onReady() {
-    var _this = this;
-    var selectorQuery = uni.createSelectorQuery();
-    selectorQuery.selectAll('.nav-left-item').boundingClientRect(function (rects) {
-      _this.leftItemHeight = rects[0].height;
-      _this.navLeftHeight = _this.leftItemHeight * _classifyData.default.length;
-      _this.diff = _this.navLeftHeight - _this.height;
-    });
-    selectorQuery.selectAll('.box').boundingClientRect(function (rects) {
-      var arr = [0];
-      var top = 0;
-      rects.forEach(function (rect) {
-        // 					rect.id      // 节点的ID
-        // 					rect.dataset // 节点的dataset
-        // 					rect.left    // 节点的左边界坐标
-        // 					rect.right   // 节点的右边界坐标
-        // 					rect.top     // 节点的上边界坐标
-        // 					rect.bottom  // 节点的下边界坐标
-        // 					rect.width   // 节点的宽度
-        // 					rect.height  // 节点的高度
-        top += rect.height;
-        arr.push(top);
-      });
-      console.log(arr);
-      _this.arr = arr;
-    }).exec();
+    this.getHeightList();
   },
   methods: {
+    getHeightList: function getHeightList() {
+      var _this = this;
+      var selectorQuery = uni.createSelectorQuery();
+      selectorQuery.selectAll('.nav-left-item').boundingClientRect(function (rects) {
+        _this.leftItemHeight = rects[0].height;
+        _this.navLeftHeight = _this.leftItemHeight * _classifyData.default.length;
+        _this.diff = _this.navLeftHeight - _this.height;
+      });
+      selectorQuery.selectAll('.box').boundingClientRect(function (rects) {
+        var arr = [0];
+        var top = 0;
+        rects.forEach(function (rect) {
+          // 					rect.id      // 节点的ID
+          // 					rect.dataset // 节点的dataset
+          // 					rect.left    // 节点的左边界坐标
+          // 					rect.right   // 节点的右边界坐标
+          // 					rect.top     // 节点的上边界坐标
+          // 					rect.bottom  // 节点的下边界坐标
+          // 					rect.width   // 节点的宽度
+          // 					rect.height  // 节点的高度
+          top += rect.height;
+          arr.push(top);
+        });
+        console.log(arr);
+        _this.arr = arr;
+      }).exec();
+    },
     scroll: function scroll(e) {
       var _this = this;
       if (this.timeoutId) {

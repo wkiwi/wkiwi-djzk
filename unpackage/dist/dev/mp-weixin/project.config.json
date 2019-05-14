@@ -9,7 +9,7 @@
     "es6": true
   },
   "compileType": "miniprogram",
-  "libVersion": "",
+  "libVersion": "2.6.4",
   "appid": "wxeacca8b837d0c7bb",
   "projectname": "wkiwi-djzk",
   "condition": {
