@@ -18,14 +18,6 @@
 
 [查看完整版请戳这里](http://down.kiwifruits.cn)
 
-##部分截图事例
-
-<img src="https://raw.githubusercontent.com/wkiwi/wkiwi-djzk/master/demo.png" width="365" />
-<img src="https://raw.githubusercontent.com/wkiwi/wkiwi-djzk/master/demo2.png" width="365" />
-<img src="https://raw.githubusercontent.com/wkiwi/wkiwi-djzk/master/demo3.png" width="365" />
-<img src="https://raw.githubusercontent.com/wkiwi/wkiwi-djzk/master/demo4.gif" width="365" />
-<img src="https://raw.githubusercontent.com/wkiwi/wkiwi-djzk/master/demo5.png" width="365" />
-
 
 
 ##使用说明
@@ -53,3 +45,11 @@ created(){
 	})
 },
 ```
+
+##部分截图事例
+
+<img src="https://raw.githubusercontent.com/wkiwi/wkiwi-djzk/master/demo.png" width="365" />
+<img src="https://raw.githubusercontent.com/wkiwi/wkiwi-djzk/master/demo2.png" width="365" />
+<img src="https://raw.githubusercontent.com/wkiwi/wkiwi-djzk/master/demo3.png" width="365" />
+<img src="https://raw.githubusercontent.com/wkiwi/wkiwi-djzk/master/demo4.gif" width="365" />
+<img src="https://raw.githubusercontent.com/wkiwi/wkiwi-djzk/master/demo5.png" width="365" />
