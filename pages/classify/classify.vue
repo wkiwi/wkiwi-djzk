@@ -83,6 +83,7 @@
 				}
 				this.timeoutId = setTimeout(function(){ //节流
 					_this.scrollHeight = e.detail.scrollTop + _this.height/2;
+					//若想使切换参考线为屏幕顶部请删除 _this.height/2
 					for (let i = 0; i < _this.arr.length;i++) {
 						let height1 = _this.arr[i];
 						let height2 = _this.arr[i+1];
@@ -148,9 +149,12 @@
 		display: block;
 		overflow: hidden;
 		border-bottom: 20upx solid #f3f3f3;
+		/* min-height: 100vh; */ 
+		/*若您的子分类过少想使得每个子分类占满屏请放开上边注视 */
 	}
 	.box:last-child {
 		border: none;
+		min-height:100vh;
 	}
 	.nav-right-item {
 		width: 28%;

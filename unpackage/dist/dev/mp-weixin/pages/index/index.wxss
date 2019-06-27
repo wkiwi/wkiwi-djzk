@@ -7,7 +7,8 @@
 .goods-item.data-v-7af61da0{
 		float: left; 
 		width: 50%;
-		border-radius: 10rpx;
+		-webkit-border-radius: 10rpx;
+		        border-radius: 10rpx;
 }
 .goods-item:nth-child(odd)  .goods-item-wrapper.data-v-7af61da0 {
 		margin-right: 5rpx;
@@ -18,7 +19,8 @@
 .goods-item-wrapper.data-v-7af61da0 {
 		background: #fff;
 		margin-bottom: 10rpx;
-		border-radius:10rpx;
+		-webkit-border-radius:10rpx;
+		        border-radius:10rpx;
 		overflow:hidden;
 		-webkit-box-shadow: 0px 0px 5px rgba(7,17,27,.2);
 		        box-shadow: 0px 0px 5px rgba(7,17,27,.2);
@@ -84,16 +86,20 @@
 		min-width:50rpx;
 		border: 1px solid #ff1f1f;
 		text-align: center;
-		border-top-left-radius: 10rpx;
-		border-bottom-left-radius: 10rpx;
+		-webkit-border-top-left-radius: 10rpx;
+		        border-top-left-radius: 10rpx;
+		-webkit-border-bottom-left-radius: 10rpx;
+		        border-bottom-left-radius: 10rpx;
 }
 .row-coupon .coupon-price-right.data-v-7af61da0 {
 		display:inline-block;
 		background:#ff1f1f;
 		color:#fff;
 		border: 1px solid #ff1f1f;
-		border-top-right-radius: 10rpx;
-		border-bottom-right-radius: 10rpx;
+		-webkit-border-top-right-radius: 10rpx;
+		        border-top-right-radius: 10rpx;
+		-webkit-border-bottom-right-radius: 10rpx;
+		        border-bottom-right-radius: 10rpx;
 }
 .row-coupon	.quanhou.data-v-7af61da0{
 		width: 50%;
@@ -129,7 +135,8 @@ view.data-v-0e4a3196{
 	height: 400rpx;
 	background: #fff;
 	margin:0 8rpx;
-	border-radius: 15rpx;
+	-webkit-border-radius: 15rpx;
+	        border-radius: 15rpx;
 	overflow:hidden;
 	position:relative;
 	-webkit-box-shadow: 0px 15px 20px rgba(7,17,27,.2);
@@ -162,8 +169,10 @@ view.data-v-0e4a3196{
 	overflow: hidden;
 	font-size: 20rpx;
 	line-height: 50rpx;
-	border-top-left-radius: 10rpx;
-	border-top-right-radius: 10rpx;
+	-webkit-border-top-left-radius: 10rpx;
+	        border-top-left-radius: 10rpx;
+	-webkit-border-top-right-radius: 10rpx;
+	        border-top-right-radius: 10rpx;
 }
 .desc.data-v-0e4a3196 {
 	height: 100rpx;
@@ -206,13 +215,15 @@ view.data-v-0e4a3196{
 		z-index:100;
 		background: rgba(0,0,0,.6);
 		padding: 4rpx 10rpx;
-		border-radius: 30rpx;
+		-webkit-border-radius: 30rpx;
+		        border-radius: 30rpx;
 }
 .avator.data-v-139aa1d0{
 		display: inline-block;
     width: 40rpx;
     height: 40rpx;
-    border-radius: 40rpx;
+    -webkit-border-radius: 40rpx;
+            border-radius: 40rpx;
     background: #666;
     overflow: hidden;
 		vertical-align: middle;
@@ -260,7 +271,8 @@ view.data-v-0e4a3196{
 		right: 30rpx;
 		z-index: 2000;
 		padding: 10rpx;
-		border-radius: 50%;
+		-webkit-border-radius: 50%;
+		        border-radius: 50%;
 		overflow: hidden;
 		opacity: 0;
 		-webkit-transition: all .4s ease 0s;
@@ -270,7 +282,8 @@ view.data-v-0e4a3196{
 .back-bg.data-v-25274fcc{
 		width: 60rpx;
 		height: 60rpx;
-		border-radius: 50%;
+		-webkit-border-radius: 50%;
+		        border-radius: 50%;
 		overflow: hidden;
 		background: rgba(255,81,0,.8);
 		color: #FFFFFF;
@@ -308,7 +321,8 @@ view.data-v-0e4a3196{
 	line-height: 50rpx;
 	padding: 10rpx 50rpx;
 	border: 1px solid #f1f1f1;
-	border-radius: 50rpx;
+	-webkit-border-radius: 50rpx;
+	        border-radius: 50rpx;
 	background: rgba(255,255,255,.8);
 }
 .search.data-v-3ad97edc {
@@ -354,10 +368,13 @@ view.data-v-0e4a3196{
 	width: 150rpx;
 	line-height: 50rpx;
 	margin: 25rpx 0;
-	border-top-right-radius: 50rpx;
-	border-bottom-right-radius: 50rpx;
+	-webkit-border-top-right-radius: 50rpx;
+	        border-top-right-radius: 50rpx;
+	-webkit-border-bottom-right-radius: 50rpx;
+	        border-bottom-right-radius: 50rpx;
 	padding: 0 20rpx;
 	background:-webkit-gradient(linear,left top, right top,from(#ff8300),to(#ff5100));
+	background:-webkit-linear-gradient(left,#ff8300,#ff5100);
 	background:-o-linear-gradient(left,#ff8300,#ff5100);
 	background:linear-gradient(to right,#ff8300,#ff5100);
 	color: #fff;

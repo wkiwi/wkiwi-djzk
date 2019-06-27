@@ -1292,6 +1292,7 @@ var _classifyData = _interopRequireDefault(__webpack_require__(/*! ../../common/
       }
       this.timeoutId = setTimeout(function () {//节流
         _this.scrollHeight = e.detail.scrollTop + _this.height / 2;
+        //若想使切换参考线为屏幕顶部请删除 _this.height/2
         for (var i = 0; i < _this.arr.length; i++) {
           var height1 = _this.arr[i];
           var height2 = _this.arr[i + 1];

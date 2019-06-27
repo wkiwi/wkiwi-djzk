@@ -46,9 +46,12 @@
 		display: block;
 		overflow: hidden;
 		border-bottom: 20rpx solid #f3f3f3;
+		/* min-height: 100vh; */ 
+		/*若您的子分类过少想使得每个子分类占满屏请放开上边注视 */
 }
 .box:last-child {
 		border: none;
+		min-height:100vh;
 }
 .nav-right-item {
 		width: 28%;
