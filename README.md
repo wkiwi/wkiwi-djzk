@@ -4,6 +4,13 @@
 
 # 更新历史
 
+2019-07-09 18:14
+更新在初次进入页面，只滑动右边部分，未点击左部分按钮情况下，点击第一项，并不能使得右部分滚回顶部，问题是scrollTop初始值，与点击第一项计算的0相同，所以页面就不会刷新。
+``` bash
+原代码为 this.scrollTop = this.arr[index]
+修改为this.scrollTop == this.arr[index] ? this.scrollTop = this.scrollTop+1 : this.scrollTop = this.arr[index]
+```
+
 2019-06-27 16:44
 更新部分开发者子分类数据过少不能占满一屏,增加解决方案，解决最后一项分类内容过少无法定位到该分类BUG
 

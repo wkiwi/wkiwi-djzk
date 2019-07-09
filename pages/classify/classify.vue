@@ -99,7 +99,7 @@
 			},
 			categoryClickMain(index) {
 				this.categoryActive = index;
-				this.scrollTop = this.arr[index]
+				this.scrollTop == this.arr[index] ? this.scrollTop = this.scrollTop+1 : this.scrollTop = this.arr[index]//防止两次相等造成点击不触发滚动时间
 			},
 			cart: function (text) {
 				uni.showToast({
