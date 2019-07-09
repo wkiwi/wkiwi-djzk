@@ -82,7 +82,8 @@
 					clearTimeout(this.timeoutId);
 				}
 				this.timeoutId = setTimeout(function(){ //节流
-					_this.scrollHeight = e.detail.scrollTop + _this.height/2;
+					_this.scrollHeight = e.detail.scrollTop + 1 + _this.height/2;
+					//+1不要删除，解决最后一项某种情况下翻到底部，左边按钮并不会切换至最后一个
 					//若想使切换参考线为屏幕顶部请删除 _this.height/2
 					for (let i = 0; i < _this.arr.length;i++) {
 						let height1 = _this.arr[i];
